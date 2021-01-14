@@ -290,8 +290,12 @@ if($validUser) {
                         <h5 class="card-title">' . $platforms[$platform]['name'] . '</h5>
                         <p class="card-text"><small class="text-muted">' . $platforms[$platform]['prot'] . "://" . $platforms[$platform]['url'] . ' (Robots-Status: Unknown)</small></p>
                         <div class="d-flex">
-                            <p class="card-text"><a class="btn btn-sm btn-primary me-2" href="' . $platforms[$platform]['prot'] . "://" . $platforms[$platform]['url'] . '" target="_blank">WordPress Website</a></p>
-                            <p class="card-text"><a class="btn btn-sm btn-secondary me-2" href="' . $platforms[$platform]['prot'] . "://" . $platforms[$platform]['url'] . '/wp-admin" target="_blank">WordPress Admin</a></p>
+                            <p class="card-text"><a class="btn btn-sm btn-primary me-2" href="' . $platforms[$platform]['prot'] . "://" . $platforms[$platform]['url'] . '" target="_blank">Website</a></p>
+                            <form name="loginform" id="loginform" action="' . $platforms[$platform]['prot'] . '://' . $platforms[$platform]['url'] . '' . $platforms[$platform]['login']['urlpath'] . '" method="' . $platforms[$platform]['login']['method'] . '" target="_blank">
+                                <input type="hidden" name="log" id="user_login" class="input" value="' . $platforms[$platform]['login']['user'] . '">
+                                <input type="hidden" name="pwd" id="user_pass" class="input password-input" value="' . $platforms[$platform]['login']['pass'] . '">
+                                <input type="submit" name="wp-submit" id="wp-submit" class="btn btn-sm btn-secondary me-2" value="WordPress Admin" />
+                            </form>
                         </div>
                         <div class="d-flex">
                             <form name="lock" action="" method="post">
