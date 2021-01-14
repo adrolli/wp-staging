@@ -26,3 +26,6 @@ Work in progress, do not use!
 - feather - use or remove
 - CSS-fix Card with iFrame
 - Responsive Fixes
+- Configuration-Feature, manage stages
+- Skip tables @ import (user driven contents like comments)
+- Search/Replace-Filter (replace specific settings, users, ...)
