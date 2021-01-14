@@ -1,2 +1,8 @@
 .env
 config.php
+*.sql
+*.tar.gz
+*.tar
+*.log
+*.old
+*.old.php
