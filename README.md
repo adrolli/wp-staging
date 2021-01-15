@@ -22,6 +22,8 @@ Work in progress, do not use!
 - display-flex on login-body
 - footer in app?
 
+- Includes / howto run?
+
 - init platforms
   - live
     - wpconfig: d034dcf5:L7awkUC5z4Xa9
