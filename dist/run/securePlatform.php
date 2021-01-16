@@ -1,3 +1,6 @@
 <?php
 
-// lock, unlock, (status)
+/* 
+ * lock, unlock, (status)
+ * 
+ */

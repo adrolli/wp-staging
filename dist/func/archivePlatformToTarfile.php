@@ -1,6 +1,10 @@
 <?php
 
-// Backup a platform to tar.gz-Archive
+/* 
+ * Backup platform, create tar.gz archive
+ * 
+ */
+
 function backupPlatform($platform, $platforms, $stages_relpath, $backup_path) {
 
     $dir_path = $stages_relpath . $platforms[$platform]['path'];

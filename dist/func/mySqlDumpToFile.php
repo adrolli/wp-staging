@@ -1,6 +1,10 @@
 <?php
 
-// Dump a mysql-table to dump.sql
+/* 
+ * Dump mysql-table to sql-file
+ * 
+ */
+
 function backupMysql($platform, $platforms, $stages_relpath) {
 
     $platformpath = $stages_relpath . $platforms[$platform]['path'];

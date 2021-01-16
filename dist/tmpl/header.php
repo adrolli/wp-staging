@@ -1,3 +1,12 @@
+<?php
+
+/* 
+ * HTML header template
+ * 
+ */
+
+?>
+
 <!doctype html>
 <html lang="en">
     <head>

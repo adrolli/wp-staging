@@ -1,6 +1,9 @@
 <?php
+/* 
+ * Backup platform, delete platform, restore platform and stage (search & replace) platform
+ * 
+ */
 
-// Copy to another stage
 function copyStage($platform, $target_platform, $platforms, $stages_relpath, $backup_path) {
     list($success,$error) = backupMysql($platform, $platforms, $stages_relpath);
     list($success,$error) = backupPlatformWithDb($platform, $platforms, $stages_relpath, $backup_path);

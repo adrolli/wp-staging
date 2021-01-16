@@ -1,6 +1,10 @@
 <?php
 
-// Read DB-creds from wp-config.php
+/* 
+ * Read DB-creds from wp-config.php
+ * 
+ */
+
 function getDatabaseFromConfig($path) {
     require_once($path);
     $dbconn = [

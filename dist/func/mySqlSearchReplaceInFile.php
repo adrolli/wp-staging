@@ -1,6 +1,10 @@
 <?php
 
-// Search and replace url and path in sql-file
+/* 
+ * Search and replace (e. g. url and path) in sql-file
+ * 
+ */
+
 function replaceInSqlFile($platform, $target_platform, $platforms, $stages_relpath) {
 
     $path_to_file = $stages_relpath . $platforms[$platform]['path'] . "dump.sql";

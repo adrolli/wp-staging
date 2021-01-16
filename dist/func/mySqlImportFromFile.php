@@ -1,6 +1,10 @@
 <?php
 
-// Pump the SQL-file into database
+/* 
+ * Restore mysql-table from sql-file
+ * 
+ */
+
 function restoreMysql($platform, $platforms, $stages_relpath) {
 
     $platformpath = $stages_relpath . $platforms[$platform]['path'];

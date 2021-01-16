@@ -13,34 +13,20 @@ Work in progress, do not use!
 ```
 2) Copy config-example.php to config.php
 3) Adjust settings in config.php (Username, Passwort, Stages and Paths)
-4) Create a subdomain to make the folder web-accessible
-5) Login and start to manage your WordPress-Stages
+4) Create a subdomain (e. g. staging.yours.com) to make the folder web-accessible
+5) Login and start to manage your WordPress-Stages (e. g. https://staging.yours.com)
 
 ## Todo
 
-- class="text-center" on login-body
-- display-flex on login-body
-- footer in app?
-
-- Includes / howto run?
-
-- init platforms
-  - live
-    - wpconfig: d034dcf5:L7awkUC5z4Xa9
-    - robots + htaccess
-    - dump.sql search,replace,import
-  - last
-    - wpconfig: d034e7ed:G7VhgK8A6yFcTk6F
-    - robots + htaccess
-    - dump.sql search,replace,import
-- live umbauen, contents ausdünnen
+- Backup-Feature
+- Restore-Feature
+- Stage-Feature
+- Robots-Feature
+- Matomo-Feature (or hotfix)
 - .htaccess (und robots.txt) sichern
 - tar wird nicht gelöscht in /backup
 - plattform-kopie fehlt
 - robots checken
-- lock-funktion
-
-- refactor (config outside, bootstrap locally, clean code)
 - initialize new stage
   - create folder for new stage
   - copy source-stage
@@ -50,20 +36,12 @@ Work in progress, do not use!
   - test stage availability
   - add stage to configuration
   - add "new stage" to stage-to dropdown
-- better errorhandling / toast messages
-- exclude tables (user driven content like comments, forms)
-- exclude files (cache-folder?)
-
-- Backup-Feature
-- Staging-Feature
-- Lock-Feature
-- Robots-Feature
-- Matomo-Feature (or hotfix)
-- Restore-Feature
+- logging and better errorhandling / toast messages
 - feather - use or remove
 - CSS-fix Card with iFrame
 - Responsive Fixes
 - Configuration-Feature, manage stages
+- Substages and more platforms (typo3, laravel etc.)
 - Exclude files or folders (cache)
 - Manipulate settings (robots, debug)
 - Skip tables @ import (user driven contents like comments)

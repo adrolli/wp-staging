@@ -1,0 +1,6 @@
+<?php
+
+/* 
+ * Delete platform-folder
+ * 
+ */

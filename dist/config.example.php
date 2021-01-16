@@ -1,7 +1,18 @@
 <?php
 
+/* 
+ * Example configuration
+ * Copy this file or rename to config.php
+ * 
+ */
+
+// username for login, must be a valid mailaddress
 $username = "admin@local.test";
+// password for login
 $password = "password";
+// define platforms to manage
+// avail. types: wp; matomo
+// login is optional for autologin
 $platforms = [
     "live" => [
         "type"  => "wp",
@@ -43,5 +54,7 @@ $platforms = [
         ],
     ],
 ];
+// where are the stages rel to app
 $stages_relpath = "../";
+// where should backups be store rel to app
 $backup_path = "backup/";

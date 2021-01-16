@@ -1,5 +1,10 @@
 <?php
 
+/* 
+ * Backup platform incl. SQL-dump to tar.gz archive
+ * 
+ */
+
 // Backup a plattform incl. SQL-file
 function backupPlatformWithDb($platform, $platforms, $stages_relpath, $backup_path) {
     list($success,$error) = backupMysql($platform, $platforms, $stages_relpath);

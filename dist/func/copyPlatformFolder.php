@@ -1,6 +1,10 @@
 <?php
 
-// Copy a platform-folder
+/* 
+ * Copy platform-folder
+ * 
+ */
+
 function copyPlatformFolder($platform, $target_platform, $platforms, $stages_relpath) {
 
     $platformpath = $stages_relpath . $platforms[$platform]['path'];
