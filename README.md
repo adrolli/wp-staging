@@ -18,7 +18,6 @@ Work in progress, do not use!
 
 ## Todo
 
-- Dropdown for staging sends wrong src platform
 - Backup-Feature
 - Restore-Feature
 - Stage-Feature
