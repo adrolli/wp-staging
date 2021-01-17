@@ -18,6 +18,7 @@ Work in progress, do not use!
 
 ## Todo
 
+- Dropdown for staging sends wrong src platform
 - Backup-Feature
 - Restore-Feature
 - Stage-Feature
@@ -38,7 +39,6 @@ Work in progress, do not use!
   - add "new stage" to stage-to dropdown
 - logging and better errorhandling / toast messages
 - feather - use or remove
-- CSS-fix Card with iFrame
 - Responsive Fixes
 - Configuration-Feature, manage stages
 - Substages and more platforms (typo3, laravel etc.)
@@ -46,3 +46,5 @@ Work in progress, do not use!
 - Manipulate settings (robots, debug)
 - Skip tables @ import (user driven contents like comments)
 - Search/Replace-Filter (replace specific settings, users, ...)
+- Navigation (Dashboard, Platforms & Staging, Backup & Restore)
+- Refactor (maybe using Laravel, Lumen or https://fatfreeframework.com/)

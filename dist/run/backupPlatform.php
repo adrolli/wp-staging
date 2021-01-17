@@ -17,6 +17,12 @@ if(isset($_POST["backup"])) {
     $success = $platform . "-backup";
 }
 
+if($_POST["mode"] == "stage") {
+    $platform = $_POST["platform"];
+    $target_platform = $_POST["target_platform"];
+    $success = $platform . " to " . $target_platform;
+}
+
 if(isset($_GET["platform"])) {
     $platform = $_GET["platform"];
     $target_platform = $_GET["target_platform"];
