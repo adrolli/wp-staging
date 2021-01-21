@@ -1,6 +1,6 @@
 # W-I-P - WordPress Staging Manager
 
-Work in progress, do not use!
+Work in progress, means just a click-dummy, do not use!
 
 ## Installation
 
@@ -18,7 +18,7 @@ Work in progress, do not use!
 
 ## Todo
 
-- Ajax-Toasts using https://www.php.net/manual/en/function.ob-implicit-flush.php on https://stages.meinsolarstrom.de/run/backupPlatform.php does not work as expected...
+- Ajax-Toasts using https://www.php.net/manual/en/function.ob-implicit-flush.php on https://stages.meinsolarstrom.de/run/backupPlatform.php does not work as expected... see archivePlatformToTarfile.php for additional toasts
 - Backup-Feature
 - Restore-Feature
 - Stage-Feature

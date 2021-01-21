@@ -16,8 +16,12 @@ function archivePlatformToTarfile($platform, $platforms, $stages_relpath, $backu
         $archive->compress(Phar::GZ);
         unlink($archive_name);
         $success = "Archive " . $archive_name . " created from folder " . $dir_path . ".";
+        displayToastMessage("success","Success", $success);
+        echo $success;
     } else {
-        $error = 'Archive could not be created. No compression available.';
+        $error = "Archive " . $archive_name . "  could not be created.";
+        displayToastMessage("danger","Error", $error);
+        echo $error;
     }
     return array($success,$error);
 }
