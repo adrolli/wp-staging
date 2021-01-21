@@ -44,31 +44,34 @@
                                     <input type="hidden" name="platform" value="<?php echo  $platform  ?>">
                                     <button class="btn btn-sm btn-danger me-2" type="submit" name="lock">Locked</button>
                                 </form>
-                                <form name="backup" action="" method="post">
-                                    <input type="hidden" name="platform" value="<?php echo  $platform  ?>">
+                                <form name="backup-<?php echo $platform ?>" action="" method="post" id="backup-<?php echo $platform ?>">
+                                    <script>runs.push("backup-<?php echo $platform ?>");</script>
+                                    <input type="hidden" name="platform" value="<?php echo $platform  ?>">
                                     <button class="btn btn-sm btn-success me-2" type="submit" name="backup">Backup</button>
                                 </form>
-                                <form name="stage" id="stage-<?php echo $platform ?>" action="" method="post">
-                                    <input type="hidden" name="mode" value="stage">
-                                    <input type="hidden" name="target_platform" id="<?php echo $platform ?>-stageto" value="">
-                                    <input type="hidden" name="platform" value="<?php echo $platform  ?>">
-                                    <div class="dropdown">
-                                            <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                                                Stage to
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <?php
+                                <div class="dropdown">
+                                        <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Stage to
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <?php
 
-                                                $this_platform = $platform;
-                                                foreach ($platforms as $platform => $value) {
-                                                    if ($platforms[$this_platform]['name'] != $platforms[$platform]['name']) {
-                                                        echo '<li><span class="dropdown-item" onclick="document.getElementById(\'' . $this_platform . '-stageto\').value=\'' . $platform . '\'; document.getElementById(\'stage-' . $this_platform . '\').submit();">' . $platforms[$platform]['name'] . '</li>';
-                                                    }
+                                            $this_platform = $platform;
+                                            foreach ($platforms as $platform => $value) {
+                                                if ($platforms[$this_platform]['name'] != $platforms[$platform]['name']) {
+                                                    echo '<li>
+                                                    <script>runs.push("stage-' . $this_platform . '-' . $platform . '");</script>
+                                                    <form name="stage-' . $this_platform . '-' . $platform . '" method="post" id="stage-' . $this_platform . '-' . $platform . '">
+                                                    <input type="hidden" name="sourcePlatform" value="' . $this_platform . '">                           
+                                                    <input type="hidden" name="targetPlatform" value="' . $platform . '">
+                                                    <button class="btn btn-sm" type="submit">' . $platforms[$platform]['name'] . '</button>
+                                                    </form>
+                                                    </li>';
                                                 }
-                                            ?>
-                                            </ul>
-                                    </div>
-                                </form>
+                                            }
+                                        ?>
+                                        </ul>
+                                </div>
                             </div>
                         </div>
                     </div>

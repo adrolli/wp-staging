@@ -13,12 +13,7 @@
 
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/bootstrap.bundle.min.js"></script>
-
-<script>
-    $(document).ready(function() {
-        $(".toast").toast('show');
-    });
-</script>
+<?php echo '<script src="assets/js/'.($validUser ? 'app' : 'login').'.js"></script>'; ?>
 
 </body>
 </html>

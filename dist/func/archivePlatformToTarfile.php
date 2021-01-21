@@ -5,10 +5,10 @@
  * 
  */
 
-function backupPlatform($platform, $platforms, $stages_relpath, $backup_path) {
+function archivePlatformToTarfile($platform, $platforms, $stages_relpath, $backup_path) {
 
-    $dir_path = $stages_relpath . $platforms[$platform]['path'];
-    $archive_name = $backup_path . $platform . "_backup.tar";
+    $dir_path = "../" . $stages_relpath . $platforms[$platform]['path'];
+    $archive_name = "../" . $backup_path . $platform . "_backup.tar";
 
     if (Phar::canCompress()) {
         $archive = new PharData($archive_name);
