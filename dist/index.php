@@ -12,7 +12,6 @@ include("tmpl/header.php");
 if($validUser) {
 
     include("inc/loader.php");
-    include("inc/logout.php");
     include("tmpl/app.main.php");
 
 } else {

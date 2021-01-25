@@ -5,7 +5,14 @@
  * 
  */
 
- if(isset($_POST["out"])) {
-    session_destroy();
-    header('Location: '.$_SERVER['PHP_SELF']);
+include("login.php");
+
+function siteURL()
+{
+    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+    $domainName = $_SERVER['HTTP_HOST'].'/';
+    return $protocol.$domainName;
 }
+
+session_destroy();
+header('Location: '. siteURL());

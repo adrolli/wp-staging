@@ -17,7 +17,7 @@
 
     <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
-            <form name="logout" action="" method="post">
+            <form name="logout" action="inc/logout.php" method="post">
 
             <button class="btn btn-large" style="color: white;" type="submit" name="out">Sign out</button>
 
